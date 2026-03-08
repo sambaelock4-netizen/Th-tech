@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Services | Th-tech</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="Services.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <span class="logo-main">Th</span><span class="logo-accent">-tech.</span>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="Acceuil.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="Services.html" class="active">Services</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+    
+    <div class="header-actions">
+        <button class="btn-service">DEMANDER UN SERVICE</button>
+    </div>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</header>
+<section class="services-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center">
+        <h1 class="animate__animated animate__fadeInUp">Nos Services</h1>
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1">
+            Des solutions digitales complètes pour propulser votre entreprise
+        </p>
+    </div>
+</section>
+
+<!-- CAROUSEL SERVICES -->
+<section class="services-carousel py-5">
+    <div class="container">
+        <div id="servicesCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+            
+            <!-- Indicateurs -->
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#servicesCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            </div>
+            
+            <!-- Slides -->
+            <div class="carousel-inner">
+                
+                <!-- SLIDE 1: WEB -->
+                <div class="carousel-item active">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="service-content">
+                                <span class="service-badge mb-3 d-inline-block">Service Principal</span>
+                                <h2 class="display-4 mb-4">Développement Web</h2>
+                                <p class="lead mb-4">
+                                    Création de sites web modernes, performants et adaptés à vos besoins. 
+                                    Nous transformons vos idées en réalité numérique.
+                                </p>
+                                <ul class="service-features mb-4">
+                                    <li><i class="bi bi-check-circle-fill"></i> Sites vitrines professionnels</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Développement WordPress & Drupal</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Applications web sur mesure</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Responsive Design (Mobile-first)</li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                        <i class="bi bi-send me-2"></i>Demander un devis
+                                    </a>
+                                    <a href="a-propos.html" class="btn btn-outline-light btn-lg">
+                                        En savoir plus
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <div class="service-image">
+                                <div class="image-frame">
+                                    <i class="bi bi-code-slash service-icon"></i>
+                                </div>
+                                <div class="floating-elements">
+                                    <span class="float-card float-1"><i class="bi bi-wordpress"></i></span>
+                                    <span class="float-card float-2"><i class="bi bi-filetype-html"></i></span>
+                                    <span class="float-card float-3"><i class="bi bi-filetype-css"></i></span>
+                                    <span class="float-card float-4"><i class="bi bi-filetype-js"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SLIDE 2: MOBILE -->
+                <div class="carousel-item">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="service-content">
+                                <span class="service-badge mb-3 d-inline-block">Innovation</span>
+                                <h2 class="display-4 mb-4">Applications Mobiles</h2>
+                                <p class="lead mb-4">
+                                    Dévelopment d'applications mobiles simples et performantes avec Ionic. 
+                                    Reach your customers anywhere, anytime.
+                                </p>
+                                <ul class="service-features mb-4">
+                                    <li><i class="bi bi-check-circle-fill"></i> Applications iOS & Android</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Progressive Web Apps (PWA)</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Interface utilisateur intuitive</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Synchronisation en temps réel</li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                        <i class="bi bi-send me-2"></i>Demander un devis
+                                    </a>
+                                    <a href="a-propos.html" class="btn btn-outline-light btn-lg">
+                                        En savoir plus
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <div class="service-image">
+                                <div class="image-frame mobile-frame">
+                                    <i class="bi bi-phone service-icon"></i>
+                                </div>
+                                <div class="floating-elements">
+                                    <span class="float-card float-1"><i class="bi bi-apple"></i></span>
+                                    <span class="float-card float-2"><i class="bi bi-android"></i></span>
+                                    <span class="float-card float-3"><i class="bi bi-cloud"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SLIDE 3: LOGICIELS -->
+                <div class="carousel-item">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="service-content">
+                                <span class="service-badge mb-3 d-inline-block">Sur Mesure</span>
+                                <h2 class="display-4 mb-4">Logiciels Sur Mesure</h2>
+                                <p class="lead mb-4">
+                                    Solutions logicielles personnalisées pour optimiser vos processus métier. 
+                                    Nous développons des outils qui s'adaptent à votre activité.
+                                </p>
+                                <ul class="service-features mb-4">
+                                    <li><i class="bi bi-check-circle-fill"></i> Logiciels de gestion</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Solutions ERP/CRM</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Automatisation de tâches</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Intégration APIs</li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                        <i class="bi bi-send me-2"></i>Demander un devis
+                                    </a>
+                                    <a href="a-propos.html" class="btn btn-outline-light btn-lg">
+                                        En savoir plus
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <div class="service-image">
+                                <div class="image-frame software-frame">
+                                    <i class="bi bi-laptop service-icon"></i>
+                                </div>
+                                <div class="floating-elements">
+                                    <span class="float-card float-1"><i class="bi bi-database"></i></span>
+                                    <span class="float-card float-2"><i class="bi bi-diagram-3"></i></span>
+                                    <span class="float-card float-3"><i class="bi bi-gear"></i></span>
+                                    <span class="float-card float-4"><i class="bi bi-bar-chart"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- SLIDE 4: MAINTENANCE -->
+                <div class="carousel-item">
+                    <div class="row align-items-center g-5">
+                        <div class="col-lg-6 order-2 order-lg-1">
+                            <div class="service-content">
+                                <span class="service-badge mb-3 d-inline-block">Support 24/7</span>
+                                <h2 class="display-4 mb-4">Maintenance & Support</h2>
+                                <p class="lead mb-4">
+                                    Nous assurons la pérennité de vos solutions digitales avec un support technique réactif 
+                                    et une maintenance proactive.
+                                </p>
+                                <ul class="service-features mb-4">
+                                    <li><i class="bi bi-check-circle-fill"></i> Support technique 24h/24, 7j/7</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Mises à jour de sécurité</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Optimisation des performances</li>
+                                    <li><i class="bi bi-check-circle-fill"></i> Sauvegardes automatiques</li>
+                                </ul>
+                                <div class="service-cta">
+                                    <a href="contact.html" class="btn btn-primary btn-lg me-3">
+                                        <i class="bi bi-send me-2"></i>Demander un devis
+                                    </a>
+                                    <a href="a-propos.html" class="btn btn-outline-light btn-lg">
+                                        En savoir plus
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 order-1 order-lg-2">
+                            <div class="service-image">
+                                <div class="image-frame support-frame">
+                                    <i class="bi bi-headset service-icon"></i>
+                                </div>
+                                <div class="floating-elements">
+                                    <span class="float-card float-1"><i class="bi bi-shield-check"></i></span>
+                                    <span class="float-card float-2"><i class="bi bi-clock-history"></i></span>
+                                    <span class="float-card float-3"><i class="bi bi-wrench"></i></span>
+                                    <span class="float-card float-4"><i class="bi bi-shield-lock"></i></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            
+            <!-- Contrôles -->
+            <button class="carousel-control-prev" type="button" data-bs-target="#servicesCarousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Précédent</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#servicesCarousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Suivant</span>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- AUTRES SERVICES -->
+<section class="other-services py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="mb-3">Autres Services</h2>
+            <p class="lead text-muted">Découvrez toutes nos offres</p>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-md-6 col-lg-3">
+                <div class="other-service-card h-100">
+                    <div class="card-icon">
+                        <i class="bi bi-palette"></i>
+                    </div>
+                    <h4>Design UI/UX</h4>
+                    <p>Interfaces utilisateur modernes et expériences utilisateur optimisées.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="other-service-card h-100">
+                    <div class="card-icon">
+                        <i class="bi bi-cloud-upload"></i>
+                    </div>
+                    <h4>Hébergement</h3>
+                    <p>Solutions d'hébergement sécurisées et performantes pour votre site.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="other-service-card h-100">
+                    <div class="card-icon">
+                        <i class="bi bi-graph-up-arrow"></i>
+                    </div>
+                    <h4>SEO & Marketing</h4>
+                    <p>Optimisation pour les moteurs de recherche et stratégies digitales.</p>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-3">
+                <div class="other-service-card h-100">
+                    <div class="card-icon">
+                        <i class="bi bi-shield-lock"></i>
+                    </div>
+                    <h4>Cybersécurité</h4>
+                    <p>Protection de vos données et systèmes contre les menaces.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-section">
+    <div class="container text-center">
+        <h2 class="cta-title">Prêt à démarrer votre projet ?</h2>
+        <p class="cta-text">Discutons ensemble de vos besoins et trouvons la meilleure solution.</p>
+        <div class="cta-buttons">
+            <a href="contact.html" class="btn btn-cta">
+                <i class="bi bi-chat-dots me-2"></i>Nous contacter
+            </a>
+            <a href="https://wa.me/237640924827" class="btn btn-cta-whatsapp">
+                <i class="bi bi-whatsapp me-2"></i>WhatsApp
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 class="footer-logo">Th-<span class="text-primary">tech.</span></h2>
+        <p class="description">
+          Expertise en solutions technologiques innovantes pour propulser votre entreprise vers l'avenir numérique.
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <h3>Navigation</h3>
+        <ul class="list-unstyled">
+          <li><a href="Acceuil.html" class="text-decoration-none text-dark">Accueil</a></li>
+          <li><a href="Services.html" class="text-decoration-none text-dark">Services</a></li>
+          <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
+          <li><a href="a-propos.html" class="text-decoration-none text-dark">À propos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3>Contact</h3>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-envelope me-2"></i>contact@th-tech.com</li>
+          <li><i class="bi bi-phone me-2"></i>+237 640 92 48 27</li>
+          <li><i class="bi bi-geo-alt me-2"></i>Douala, Cameroun</li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3>Suivez-nous</h3>
+        <div class="d-flex gap-3">
+          <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="btn btn-outline-success rounded-circle"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2026 Th-tech. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Main Script -->
+<script src="script.js"></script>
+
+<script>
+  // Animation des éléments au changement de slide
+  const carousel = document.getElementById('servicesCarousel');
+  
+  carousel.addEventListener('slide.bs.carousel', function (e) {
+    const nextSlide = e.relatedTarget;
+    const contents = nextSlide.querySelectorAll('.service-content, .service-image');
+    
+    contents.forEach((content, index) => {
+      content.style.opacity = '0';
+      content.style.transform = 'translateX(30px)';
+      
+      setTimeout(() => {
+        content.style.transition = 'all 0.6s ease';
+        content.style.opacity = '1';
+        content.style.transform = 'translateX(0)';
+      }, 100 + (index * 150));
+    });
+  });
+</script>
+</body>
+</html>
+

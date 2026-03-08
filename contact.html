@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+
+    <title>Contact | Th-tech</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="header.css">
+    <link rel="stylesheet" href="contact.css">
+    <link rel="stylesheet" href="footer.css">
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header">
+    <div class="logo">
+        <span class="logo-main">Th</span><span class="logo-accent">-tech.</span>
+    </div>
+
+    <nav class="nav" id="nav">
+        <a href="Acceuil.html">Accueil</a>
+        <a href="a-propos.html">À propos</a>
+        <a href="Services.html">Services</a>
+        <a href="contact.html" class="active">Contact</a>
+    </nav>
+    
+    <div class="header-actions">
+        <button class="btn-service">DEMANDER UN SERVICE</button>
+    </div>
+    
+    <div class="burger" id="burger">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+</header>
+
+<!-- HERO CONTACT -->
+<section class="contact-hero">
+    <div class="hero-overlay"></div>
+    <div class="hero-content text-center">
+        <h1 class="animate__animated animate__fadeInUp">Contactez-nous</h1>
+        <p class="lead animate__animated animate__fadeInUp animate__delay-1">
+            Une question ? Un projet ? N'hésitez pas à nous envoyer un message
+        </p>
+    </div>
+</section>
+
+<!-- CONTACT SECTION -->
+<section class="contact-section py-5">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Formulaire de contact -->
+            <div class="col-lg-7">
+                <div class="contact-form-wrapper">
+                    <div class="form-header mb-4">
+                        <h2>Envoyez-nous un message</h2>
+                        <p>Remplissez le formulaire ci-dessous et nous vous répondrons sous 24h</p>
+                    </div>
+                    
+                    <form class="contact-form">
+                        <div class="row g-3">
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="nom" placeholder="Votre nom" required>
+                                    <label for="nom"><i class="bi bi-person me-2"></i>Votre nom</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-floating">
+                                    <input type="text" class="form-control" id="prenom" placeholder="Votre prénom" required>
+                                    <label for="prenom"><i class="bi bi-person me-2"></i>Votre prénom</label>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-floating mt-3">
+                            <input type="email" class="form-control" id="email" placeholder="Votre email" required>
+                            <label for="email"><i class="bi bi-envelope me-2"></i>Votre adresse email</label>
+                        </div>
+                        
+                        <div class="form-floating mt-3">
+                            <input type="tel" class="form-control" id="telephone" placeholder="Votre téléphone">
+                            <label for="telephone"><i class="bi bi-phone me-2"></i>Votre téléphone (optionnel)</label>
+                        </div>
+                        
+                        <div class="form-floating mt-3">
+                            <select class="form-select" id="sujet" required>
+                                <option value="" selected disabled>Choisir un sujet</option>
+                                <option value="devis">Demande de devis</option>
+                                <option value="information">Demande d'information</option>
+                                <option value="support">Support technique</option>
+                                <option value="partenariat">Partenariat</option>
+                                <option value="autre">Autre</option>
+                            </select>
+                            <label for="sujet"><i class="bi bi-tag me-2"></i>Sujet de votre message</label>
+                        </div>
+                        
+                        <div class="form-floating mt-3">
+                            <textarea class="form-control" id="message" placeholder="Votre message" style="height: 150px" required></textarea>
+                            <label for="message"><i class="bi bi-chat-dots me-2"></i>Votre message</label>
+                        </div>
+                        
+                        <div class="form-check mt-3">
+                            <input class="form-check-input" type="checkbox" id="newsletter">
+                            <label class="form-check-label" for="newsletter">
+                                S'abonner à la newsletter pour recevoir nos actualites
+                            </label>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-submit mt-4">
+                            <span class="btn-text">Envoyer le message</span>
+                            <span class="btn-icon"><i class="bi bi-send"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Informations de contact -->
+            <div class="col-lg-5">
+                <div class="contact-info-wrapper">
+                    <div class="info-card mb-4">
+                        <div class="info-icon">
+                            <i class="bi bi-geo-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Notre adresse</h4>
+                            <p>Douala, Cameroun</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card mb-4">
+                        <div class="info-icon">
+                            <i class="bi bi-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>contact@th-tech.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card mb-4">
+                        <div class="info-icon">
+                            <i class="bi bi-telephone"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Téléphone</h4>
+                            <p>+237 640 92 48 27</p>
+                        </div>
+                    </div>
+                    
+                    <div class="info-card mb-4">
+                        <div class="info-icon">
+                            <i class="bi bi-clock"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Disponibilité</h4>
+                            <p>24h/24 - 7j/7</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Réseaux sociaux -->
+                    <div class="social-section mt-5">
+                        <h4 class="mb-3">Suivez-nous</h4>
+                        <div class="social-links">
+                            <a href="#" class="social-link facebook">
+                                <i class="bi bi-facebook"></i>
+                            </a>
+                            <a href="#" class="social-link linkedin">
+                                <i class="bi bi-linkedin"></i>
+                            </a>
+                            <a href="#" class="social-link whatsapp">
+                                <i class="bi bi-whatsapp"></i>
+                            </a>
+                            <a href="#" class="social-link instagram">
+                                <i class="bi bi-instagram"></i>
+                            </a>
+                            <a href="#" class="social-link twitter">
+                                <i class="bi bi-twitter-x"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- MAP SECTION -->
+<section class="map-section">
+    <div class="container-fluid p-0">
+        <div class="map-wrapper">
+            <div class="map-placeholder">
+                <i class="bi bi-map"></i>
+                <p>Douala, Cameroun</p>
+            </div>
+            <div class="map-overlay"></div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ SECTION -->
+<section class="faq-section py-5">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="mb-3">Questions Fréquentes</h2>
+            <p class="lead text-muted">Trouvez rapidement les réponses à vos questions</p>
+        </div>
+        
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item border-0 mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                <i class="bi bi-question-circle me-2"></i>
+                                Quels sont vos délais de réalisation ?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Les délais varient selon la complexité du projet. Pour un site vitrine, comptez environ 2-3 semaines. 
+                                Pour des applications plus complexes, nous établissons un calendrier précis lors de la phase de consultation.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                <i class="bi bi-question-circle me-2"></i>
+                                Proposez-vous des forfaits maintenance ?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Oui, nous proposons plusieurs formules de maintenance adaptées à vos besoins, incluant mises à jour, 
+                                support technique et sauvegardes régulières. N'hésitez pas à nous contacter pour un devis personnalisé.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0 mb-3">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                <i class="bi bi-question-circle me-2"></i>
+                                Comment se passe la collaboration ?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nous commençons par une consultation gratuite pour comprendre vos besoins. Ensuite, nous établissons un 
+                                cahier des charges détaillé et restons en contact régulier tout au long du développement.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item border-0">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                <i class="bi bi-question-circle me-2"></i>
+                                Quels sont vos moyens de paiement ?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Nous acceptons plusieurs moyens de paiement : virement bancaire, Mobile Money (MTN, Orange), 
+                                et PayPal. Les modalités de paiement sont discutées lors de la signature du contrat.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="cta-contact py-5">
+    <div class="container text-center">
+        <div class="cta-content">
+            <h2 class="mb-3">Prêt à démarrer votre projet ?</h2>
+            <p class="lead mb-4">
+                Discutons ensemble de vos besoins et trouvons la meilleure solution pour vous.
+            </p>
+            <div class="cta-buttons">
+                <a href="tel:+237640924827" class="btn btn-light btn-lg me-3">
+                    <i class="bi bi-telephone me-2"></i>Appeler maintenant
+                </a>
+                <a href="https://wa.me/237640924827" class="btn btn-outline-light btn-lg">
+                    <i class="bi bi-whatsapp me-2"></i>WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer py-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4">
+        <h2 class="footer-logo">Th-<span class="text-primary">tech.</span></h2>
+        <p class="description">
+          Expertise en solutions technologiques innovantes pour propulser votre entreprise vers l'avenir numérique.
+        </p>
+      </div>
+      <div class="col-lg-2">
+        <h3>Navigation</h3>
+        <ul class="list-unstyled">
+          <li><a href="Acceuil.html" class="text-decoration-none text-dark">Accueil</a></li>
+          <li><a href="Services.html" class="text-decoration-none text-dark">Services</a></li>
+          <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
+          <li><a href="a-propos.html" class="text-decoration-none text-dark">À propos</a></li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3>Contact</h3>
+        <ul class="list-unstyled">
+          <li><i class="bi bi-envelope me-2"></i>contact@th-tech.com</li>
+          <li><i class="bi bi-phone me-2"></i>+237 640 92 48 27</li>
+          <li><i class="bi bi-geo-alt me-2"></i>Douala, Cameroun</li>
+        </ul>
+      </div>
+      <div class="col-lg-3">
+        <h3>Suivez-nous</h3>
+        <div class="d-flex gap-3">
+          <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-facebook"></i></a>
+          <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-linkedin"></i></a>
+          <a href="#" class="btn btn-outline-success rounded-circle"><i class="bi bi-whatsapp"></i></a>
+        </div>
+      </div>
+    </div>
+    <hr class="my-4">
+    <div class="text-center">
+      <p class="mb-0">&copy; 2026 Th-tech. Tous droits réservés.</p>
+    </div>
+  </div>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Language & Theme Script -->
+<script src="script.js"></script>
+
+<script>
+  // Burger menu toggle
+  const burger = document.getElementById('burger');
+  const nav = document.getElementById('nav');
+  
+  if (burger && nav) {
+    burger.addEventListener('click', function(e) {
+      e.preventDefault();
+      nav.classList.toggle('active');
+      burger.classList.toggle('active');
+    });
+  }
+  
+  // Animation du formulaire au submit
+  const contactForm = document.querySelector('.contact-form');
+  contactForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    const btn = document.querySelector('.btn-submit');
+    btn.classList.add('loading');
+    
+    // Simulation d'envoi
+    setTimeout(() => {
+      btn.classList.remove('loading');
+      btn.classList.add('success');
+      btn.querySelector('.btn-text').textContent = 'Message envoyé !';
+      
+      // Reset du formulaire
+      setTimeout(() => {
+        contactForm.reset();
+        btn.classList.remove('success');
+        btn.querySelector('.btn-text').textContent = 'Envoyer le message';
+      }, 3000);
+    }, 2000);
+  });
+</script>
+</body>
+</html>
+
