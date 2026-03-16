@@ -645,33 +645,56 @@ const darkModeStyles = `
 
 // Initialize
 document.addEventListener('DOMContentLoaded', function() {
-    // Mobile navigation toggle - burger menu
-    const burger = document.querySelector('.burger');
-    const nav = document.querySelector('.nav');
-
-    if (burger && nav) {
-        burger.addEventListener('click', (e) => {
+// Robust mobile navigation toggle - burger menu
+    function initBurgerMenu() {
+        const burger = document.getElementById('burger');
+        const nav = document.getElementById('nav');
+        
+        if (!burger || !nav) {
+            console.warn('Burger or nav not found');
+            return;
+        }
+        
+        // Toggle function
+        const toggleMenu = (e) => {
             e.preventDefault();
+            e.stopPropagation();
             nav.classList.toggle('active');
             burger.classList.toggle('active');
-        });
-
-        // Close menu when a link is clicked
+        };
+        
+        // Remove existing listeners if any (prevent duplicates)
+        burger.replaceWith(burger.cloneNode(true));
+        const newBurger = document.getElementById('burger'); // Re-query
+        
+        newBurger.addEventListener('click', toggleMenu);
+        
+        // Close on nav links
         nav.querySelectorAll('a').forEach(link => {
             link.addEventListener('click', () => {
                 nav.classList.remove('active');
-                burger.classList.remove('active');
+                newBurger.classList.remove('active');
             });
         });
         
-        // Close menu when clicking outside
+        // Close on outside click
         document.addEventListener('click', (e) => {
-            if (!burger.contains(e.target) && !nav.contains(e.target)) {
+            if (!newBurger.contains(e.target) && !nav.contains(e.target)) {
                 nav.classList.remove('active');
-                burger.classList.remove('active');
+                newBurger.classList.remove('active');
+            }
+        });
+        
+        // Close on resize/landscape
+        window.addEventListener('resize', () => {
+            if (window.innerWidth > 768) {
+                nav.classList.remove('active');
+                newBurger.classList.remove('active');
             }
         });
     }
+    
+    initBurgerMenu();
 });
 
 // Apply translations to the page

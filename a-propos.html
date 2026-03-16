@@ -260,27 +260,6 @@
 <!-- Language & Theme Script -->
 <script src="script.js"></script>
 
-<script>
-  // Test burger menu - Simple direct script
-  document.addEventListener('DOMContentLoaded', function() {
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('nav');
-    
-    console.log('burger:', burger);
-    console.log('nav:', nav);
-    
-    if (burger && nav) {
-      burger.addEventListener('click', function(e) {
-        console.log('Burger clicked!');
-        e.preventDefault();
-        nav.classList.toggle('active');
-        burger.classList.toggle('active');
-        console.log('Nav classes after click:', nav.classList);
-      });
-    } else {
-      console.error('Burger or nav not found!');
-    }
-  });
-</script>
+
 </body>
 </html>
