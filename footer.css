@@ -1,0 +1,70 @@
+/* Style Global du Footer */
+.footer {
+  background: #f8fafc;
+  color: #64748b;
+  padding: 60px 0 20px 0;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+/* Styles Bootstrap adaptés */
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.footer h2 {
+    font-size: 1.75rem;
+    font-weight: bold;
+}
+
+.footer h3 {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    color: #0f172a;
+}
+
+.footer-logo span {
+    color: #7b61ff;
+}
+
+.footer ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer ul li {
+    margin-bottom: 10px;
+}
+
+.footer ul li a {
+    color: #64748b;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.footer ul li a:hover {
+    color: #7b61ff;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #e2e8f0;
+    color: #64748b;
+}
+
+/* Responsive */
+@media (max-width: 991px) {
+    .footer {
+        padding: 40px 0 20px 0;
+    }
+    
+    .footer .text-lg-start {
+        text-align: center !important;
+    }
+    
+    .footer .text-lg-end {
+        text-align: center !important;
+    }
+}

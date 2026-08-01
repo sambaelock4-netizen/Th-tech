@@ -1,0 +1,309 @@
+/* ========================================
+   SPLASH SCREEN - Th-tech
+   ======================================== */
+
+/* Réinitialisation */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Configuration de base */
+html, body {
+    height: 100%;
+    overflow: hidden;
+}
+
+/* Container principal */
+.splash-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e1b4b 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    overflow: hidden;
+}
+
+/* Contenu centré */
+.splash-content {
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    padding: 20px;
+}
+
+/* ========================================
+   LOGO AVEC ANIMATIONS
+   ======================================== */
+.logo-container {
+    margin-bottom: 60px;
+}
+
+.logo {
+    font-size: 72px;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    letter-spacing: 2px;
+    animation: logoFadeIn 1s ease-out forwards;
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+.logo-main {
+    color: #ffffff;
+    text-shadow: 0 0 30px rgba(255, 255, 255, 0.3);
+}
+
+.logo-accent {
+    color: #7b61ff;
+    text-shadow: 0 0 30px rgba(123, 97, 255, 0.6);
+}
+
+/* Effet de pulsation après l'apparition */
+.logo {
+    animation: logoFadeIn 1s ease-out forwards, logoPulse 2s ease-in-out 1s infinite;
+}
+
+@keyframes logoFadeIn {
+    0% {
+        opacity: 0;
+        transform: scale(0.5) translateY(-30px);
+    }
+    100% {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes logoPulse {
+    0%, 100% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+}
+
+/* ========================================
+   BARRE DE PROGRESSION
+   ======================================== */
+.progress-container {
+    margin-bottom: 40px;
+}
+
+.progress-bar {
+    width: 300px;
+    height: 4px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto 15px;
+}
+
+.progress-fill {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #7b61ff, #a78bfa, #7b61ff);
+    background-size: 200% 100%;
+    border-radius: 10px;
+    animation: 
+        progressFill 3s ease-in-out forwards,
+        shimmer 1.5s linear infinite;
+}
+
+@keyframes progressFill {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: 200% 0;
+    }
+    100% {
+        background-position: -200% 0;
+    }
+}
+
+.progress-text {
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 14px;
+    font-family: 'Times New Roman', Times, serif;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    animation: textPulse 1s ease-in-out infinite;
+}
+
+@keyframes textPulse {
+    0%, 100% {
+        opacity: 0.7;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* ========================================
+   TAGLINE
+   ======================================== */
+.tagline {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 16px;
+    font-family: 'Times New Roman', Times, serif;
+    font-style: italic;
+    animation: taglineFadeIn 1.5s ease-out 0.5s forwards;
+    opacity: 0;
+}
+
+@keyframes taglineFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================
+   DÉCORATIONS - CERCLES FLOTTANTS
+   ======================================== */
+.circle {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    pointer-events: none;
+}
+
+.circle-1 {
+    width: 400px;
+    height: 400px;
+    background: #7b61ff;
+    top: -100px;
+    left: -100px;
+    animation: float1 8s ease-in-out infinite;
+}
+
+.circle-2 {
+    width: 300px;
+    height: 300px;
+    background: #a78bfa;
+    bottom: -50px;
+    right: -50px;
+    animation: float2 10s ease-in-out infinite;
+}
+
+.circle-3 {
+    width: 150px;
+    height: 150px;
+    background: #ffffff;
+    top: 50%;
+    right: 10%;
+    animation: float3 6s ease-in-out infinite;
+}
+
+@keyframes float1 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(30px, 30px) scale(1.1);
+    }
+}
+
+@keyframes float2 {
+    0%, 100% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(-20px, -20px) scale(1.05);
+    }
+}
+
+@keyframes float3 {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    25% {
+        transform: translate(-10px, 15px);
+    }
+    50% {
+        transform: translate(5px, -10px);
+    }
+    75% {
+        transform: translate(-15px, -5px);
+    }
+}
+
+/* ========================================
+   EFFET DE SORTIE (FADE OUT)
+   ======================================== */
+.splash-screen.fade-out {
+    animation: fadeOut 0.8s ease-out forwards;
+}
+
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.1);
+        pointer-events: none;
+    }
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 768px) {
+    .logo {
+        font-size: 48px;
+    }
+    
+    .progress-bar {
+        width: 250px;
+    }
+    
+    .tagline {
+        font-size: 14px;
+        padding: 0 20px;
+    }
+    
+    .circle-1 {
+        width: 250px;
+        height: 250px;
+    }
+    
+    .circle-2 {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .logo {
+        font-size: 36px;
+    }
+    
+    .progress-bar {
+        width: 200px;
+    }
+    
+    .circle-3 {
+        display: none;
+    }
+}
+

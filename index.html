@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Security Meta Tags -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' 'unsafe-eval' https://cdn.jsdelivr.net; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:;">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-XSS-Protection" content="1; mode=block">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    
+    <title>Th-tech | Chargement...</title>
+    
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="splash-screen.css">
+</head>
+<body>
+    <div class="splash-screen">
+        <div class="splash-content text-center">
+            <!-- Logo avec animation -->
+            <div class="logo-container mb-5">
+                <div class="logo">
+                    <span class="logo-main">Th</span><span class="logo-accent">-tech.</span>
+                </div>
+            </div>
+            
+            <!-- Barre de progression Bootstrap -->
+            <div class="progress-container mb-4" style="max-width: 400px; margin: 0 auto 20px;">
+                <div class="progress" style="height: 8px; border-radius: 10px; background: rgba(255,255,255,0.1);">
+                    <div class="progress-bar progress-bar-striped progress-bar-animated" 
+                         role="progressbar" 
+                         style="width: 0%; background: linear-gradient(90deg, #7b61ff, #a78bfa);"
+                         id="progressBar">
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Texte de chargement -->
+            <p class="progress-text mb-3" id="loadingText">Chargement...</p>
+            
+            <!-- Tagline -->
+            <p class="tagline">Solutions Digitales de Haute Précision</p>
+            
+            <!-- Decoration circles -->
+            <div class="circle circle-1"></div>
+            <div class="circle circle-2"></div>
+            <div class="circle circle-3"></div>
+        </div>
+    </div>
+
+    <script src="splash-screen.js"></script>
+</body>
+</html>
+

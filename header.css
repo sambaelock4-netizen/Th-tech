@@ -1,0 +1,335 @@
+/* Bootstrap Icons Fallback */
+@font-face {
+  font-family: 'Bootstrap Icons';
+  src: url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/fonts/bootstrap-icons.woff2?v=1.11.3') format('woff2');
+  font-display: block;
+}
+
+[class^="bi-"]::before,
+[class*=" bi-"]::before {
+  font-family: 'Bootstrap Icons' !important;
+  font-style: normal;
+  font-weight: normal !important;
+}
+
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+  background-color: #ffffff;
+}
+
+/* HEADER WRAPPER */
+.header-wrapper {
+  position: fixed;
+  top: 18px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: calc(100% - 60px);
+  max-width: 1180px;
+  z-index: 1000;
+}
+
+/* HEADER */
+.header {
+  width: 100%;
+  height: 52px;
+  background-color: rgba(255, 255, 255, 0.96);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 50px;
+  box-shadow: 0 6px 24px rgba(0,0,0,0.10), 0 2px 6px rgba(123,97,255,0.07);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 28px;
+  transition: box-shadow 0.3s ease;
+}
+
+.header:hover {
+  box-shadow: 0 10px 36px rgba(0,0,0,0.13), 0 3px 10px rgba(123,97,255,0.11);
+}
+
+/* Header actions — masqué (bouton supprimé) */
+.header-actions {
+  display: none;
+}
+
+/* LOGO */
+.logo {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.logo-main {
+  color: #000000;
+}
+
+.logo-accent {
+  color: #7b61ff;
+}
+
+/* NAVIGATION */
+.nav {
+  display: flex;
+  gap: 50px;
+}
+
+.nav a {
+  color: #000000;
+  text-decoration: none;
+  font-size: 18px;
+  position: relative;
+}
+
+/* underline animation */
+.nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #7b61ff;
+  left: 0;
+  bottom: -6px;
+  transition: width 0.3s ease;
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* BOUTON SERVICE */
+.btn-service {
+  --color: #7b61ff;
+  display: inline-block;
+  padding: 0 26px;
+  height: 44px;
+  line-height: 42px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+
+  border: 2px solid var(--color);
+  border-radius: 8px;
+  background: transparent;
+
+  font-size: 15px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: var(--color);
+
+  transition: color 0.5s;
+  z-index: 1;
+}
+
+/* cercle animé */
+.btn-service::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  background: var(--color);
+  height: 160px;
+  width: 220px;
+  border-radius: 50%;
+  top: 120%;
+  left: 120%;
+  transition: all 0.7s ease;
+}
+
+/* hover */
+.btn-service:hover {
+  color: #ffffff;
+}
+
+.btn-service:hover::before {
+  top: -30px;
+  left: -30px;
+}
+
+/* click */
+.btn-service:active::before {
+  background: #5a42d1;
+}
+/* ===== BURGER ===== */
+.burger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  gap: 6px;
+  padding: 5px;
+  background: none;
+  border: none;
+}
+
+.burger span {
+  width: 25px;
+  height: 3px;
+  background: #000;
+  border-radius: 2px;
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+/* SVG burger icon styling */
+.burger svg {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.burger svg path {
+  stroke: #000;
+  stroke-width: 2;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  transition: 0.3s;
+}
+
+/* SVG Burger to 'X' animation */
+.burger.active svg path:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger.active svg path:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active svg path:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* Burger to 'X' animation */
+.burger.active span:nth-child(1) {
+  transform: translateY(9px) rotate(45deg);
+}
+
+.burger.active span:nth-child(2) {
+  opacity: 0;
+}
+
+.burger.active span:nth-child(3) {
+  transform: translateY(-9px) rotate(-45deg);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1200px) {
+  .header-wrapper {
+    width: calc(100% - 40px);
+  }
+  .header {
+    padding: 0 24px;
+  }
+  
+  .nav {
+    gap: 30px;
+  }
+}
+
+@media (max-width: 992px) {
+  .header-wrapper {
+    width: calc(100% - 30px);
+  }
+  .header {
+    padding: 0 20px;
+  }
+  
+  .nav {
+    gap: 20px;
+  }
+  
+  .nav a {
+    font-size: 16px;
+  }
+  
+  .logo {
+    font-size: 26px;
+  }
+  
+  .btn-service {
+    padding: 0 16px;
+    height: 38px;
+    line-height: 36px;
+    font-size: 13px;
+  }
+}
+
+@media (max-width: 768px) {
+  .header-wrapper {
+    width: calc(100% - 24px);
+    top: 12px;
+  }
+  .header {
+    padding: 0 18px;
+    border-radius: 30px;
+  }
+  
+  .logo {
+    font-size: 24px;
+  }
+  
+  /* Hide desktop navigation */
+  .nav {
+    position: fixed;
+    top: 90px;
+    right: -100%;
+    width: 100%;
+    height: calc(100vh - 90px);
+    background: white;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 25px;
+    padding-top: 40px;
+    transition: right 0.4s ease;
+    box-shadow: -5px 0 15px rgba(0,0,0,0.1);
+    z-index: 999;
+  }
+
+  .nav.active {
+    right: 0;
+  }
+
+  .nav a {
+    font-size: 18px;
+    padding: 10px 20px;
+  }
+  
+  /* Hide CTA button and header actions on mobile */
+  .header-actions {
+    display: none !important;
+  }
+
+  /* Show burger menu */
+  .burger {
+    display: flex;
+    z-index: 1001;
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    padding: 0 15px;
+  }
+  
+  .logo {
+    font-size: 22px;
+  }
+  
+  .burger span {
+    width: 22px;
+    height: 2px;
+  }
+}
+
+/* ===== HEADER ACTIONS ===== */
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
