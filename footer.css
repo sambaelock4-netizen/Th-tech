@@ -104,8 +104,8 @@
 }
 
 .cta-btn-call:hover {
-    background: linear-gradient(135deg, #6a51e0 0%, #5a42d1 100%);
-    border-color: #5a42d1;
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 55%, #7b61ff 100%) !important;
+    border-color: #7b61ff !important;
     color: #ffffff !important;
     transform: translateY(-3px);
     box-shadow: 0 18px 40px rgba(123, 97, 255, 0.48);
