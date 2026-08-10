@@ -15,22 +15,78 @@
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
     
     <link rel="stylesheet" href="css/splash-screen.css">
 </head>
 <body>
     <div class="splash-screen">
         <div class="splash-content text-center">
-            <!-- Logo avec animation -->
-            <div class="logo-container mb-5">
+            <!-- Logo -->
+            <div class="logo-container mb-4">
                 <div class="logo">
                     <span class="logo-main">Th</span><span class="logo-accent">-tech.</span>
                 </div>
             </div>
+
+            <!-- Systèmes d'exploitation & Technologies Animés (Vrais logos Officiels) -->
+            <div class="os-container mb-4">
+                <div class="os-badge" style="--i:1">
+                    <span class="os-icon">
+                        <svg width="18" height="18" viewBox="0 0 88 88" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 0H41.6V41.6H0V0Z" fill="#0078D4"/>
+                            <path d="M46.4 0H88V41.6H46.4V0Z" fill="#0078D4"/>
+                            <path d="M0 46.4H41.6V88H0V46.4Z" fill="#0078D4"/>
+                            <path d="M46.4 46.4H88V88H46.4V46.4Z" fill="#0078D4"/>
+                        </svg>
+                    </span>
+                    <span>Windows</span>
+                </div>
+
+                <div class="os-badge" style="--i:2">
+                    <span class="os-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2C9.5 2 8 3.5 8 6C8 7.5 8.5 8.5 9 9.5C7.5 11 6 13 6 16C6 19 8.5 22 12 22C15.5 22 18 19 18 16C18 13 16.5 11 15 9.5C15.5 8.5 16 7.5 16 6C16 3.5 14.5 2 12 2Z" fill="#FFA000"/>
+                            <circle cx="10" cy="6.5" r="1" fill="#000000"/>
+                            <circle cx="14" cy="6.5" r="1" fill="#000000"/>
+                            <path d="M12 11C9.8 11 8.5 13.2 8.5 16C8.5 18.8 10 20.5 12 20.5C14 20.5 15.5 18.8 15.5 16C15.5 13.2 14.2 11 12 11Z" fill="#FFFFFF"/>
+                        </svg>
+                    </span>
+                    <span>Linux</span>
+                </div>
+
+                <div class="os-badge" style="--i:3">
+                    <span class="os-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.81-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M15.97 6.35c.67-.82 1.13-1.96.99-3.1-.98.04-2.18.66-2.88 1.48-.62.72-1.16 1.88-.99 3 1.08.08 2.23-.55 2.88-1.38z"/>
+                        </svg>
+                    </span>
+                    <span>macOS</span>
+                </div>
+
+                <div class="os-badge" style="--i:4">
+                    <span class="os-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#3DDC84" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 18c0 .55.45 1 1 1h1v3c0 .55.45 1 1 1s1-.45 1-1v-3h4v3c0 .55.45 1 1 1s1-.45 1-1v-3h1c.55 0 1-.45 1-1V8H6v10zM3.5 8C2.67 8 2 8.67 2 9.5v7c0 .83.67 1.5 1.5 1.5S5 17.33 5 16.5v-7C5 8.67 4.33 8 3.5 8zm17 0c-.83 0-1.5.67-1.5 1.5v7c0 .83.67 1.5 1.5 1.5s1.5-.67 1.5-1.5v-7c0-.83-.67-1.5-1.5-1.5zM15.53 2.16l1.3-1.3c.2-.2.2-.51 0-.71-.2-.2-.51-.2-.71 0l-1.48 1.48C13.85 1.23 12.95 1 12 1c-.96 0-1.86.23-2.66.63L7.87.15c-.2-.2-.51-.2-.71 0-.2.2-.2.51 0 .71l1.31 1.31C6.97 3.26 6 5.01 6 7h12c0-1.99-.97-3.75-2.47-4.84zM10 5H9V4h1v1zm5 0h-1V4h1v1z"/>
+                        </svg>
+                    </span>
+                    <span>Android</span>
+                </div>
+
+                <div class="os-badge" style="--i:5">
+                    <span class="os-icon">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="#E34F26" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M1.5 0h21l-1.91 21.563L11.97 24l-8.564-2.438L1.5 0zm7.031 9.75l-.232-2.625 10.122.002.23-2.627-13.208-.001.7 7.876 9.497.001-.35 3.876-3.321.895-3.327-.895-.214-2.376H6.779l.375 4.38 4.816 1.341 4.811-1.341.674-7.505H8.531z"/>
+                        </svg>
+                    </span>
+                    <span>Web</span>
+                </div>
+            </div>
             
-            <!-- Barre de progression Bootstrap -->
-            <div class="progress-container mb-4" style="max-width: 400px; margin: 0 auto 20px;">
-                <div class="progress" style="height: 8px; border-radius: 10px; background: rgba(255,255,255,0.1);">
+            <!-- Barre de progression -->
+            <div class="progress-container mb-4" style="max-width: 420px; margin: 0 auto 20px;">
+                <div class="progress" style="height: 6px; border-radius: 10px; background: rgba(255,255,255,0.12);">
                     <div class="progress-bar progress-bar-striped progress-bar-animated" 
                          role="progressbar" 
                          style="width: 0%; background: linear-gradient(90deg, #7b61ff, #a78bfa);"
@@ -45,7 +101,7 @@
             <!-- Tagline -->
             <p class="tagline">Solutions Digitales de Haute Précision</p>
             
-            <!-- Decoration circles -->
+            <!-- Decoration circles (les bulles) -->
             <div class="circle circle-1"></div>
             <div class="circle circle-2"></div>
             <div class="circle circle-3"></div>

@@ -1,33 +1,33 @@
 /* ========================================
-   SPLASH SCREEN - Th-tech
+   SPLASH SCREEN - Th-tech Signature Style
    ======================================== */
 
-/* Réinitialisation */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Configuration de base */
 html, body {
     height: 100%;
     overflow: hidden;
+    font-family: 'Times New Roman', Times, serif;
 }
 
-/* Container principal */
+/* Background avec le dégradé Hero */
 .splash-screen {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(135deg, #1e293b 0%, #0f172a 50%, #1e1b4b 100%);
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #7b61ff 100%);
     display: flex;
     justify-content: center;
     align-items: center;
-    z-index: 9999;
+    z-index: 99999;
     overflow: hidden;
+    cursor: pointer;
 }
 
 /* Contenu centré */
@@ -36,23 +36,21 @@ html, body {
     position: relative;
     z-index: 2;
     padding: 20px;
+    max-width: 640px;
+    width: 100%;
 }
 
-/* ========================================
-   LOGO AVEC ANIMATIONS
-   ======================================== */
+/* Logo */
 .logo-container {
-    margin-bottom: 60px;
+    margin-bottom: 25px;
 }
 
 .logo {
-    font-size: 72px;
+    font-size: 4.5rem;
     font-family: 'Times New Roman', Times, serif;
     font-weight: bold;
     letter-spacing: 2px;
-    animation: logoFadeIn 1s ease-out forwards;
-    opacity: 0;
-    transform: scale(0.8);
+    animation: logoFadeIn 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
 
 .logo-main {
@@ -65,15 +63,10 @@ html, body {
     text-shadow: 0 0 30px rgba(123, 97, 255, 0.6);
 }
 
-/* Effet de pulsation après l'apparition */
-.logo {
-    animation: logoFadeIn 1s ease-out forwards, logoPulse 2s ease-in-out 1s infinite;
-}
-
 @keyframes logoFadeIn {
     0% {
         opacity: 0;
-        transform: scale(0.5) translateY(-30px);
+        transform: scale(0.8) translateY(-20px);
     }
     100% {
         opacity: 1;
@@ -81,176 +74,161 @@ html, body {
     }
 }
 
-@keyframes logoPulse {
-    0%, 100% {
-        transform: scale(1);
-    }
-    50% {
-        transform: scale(1.02);
-    }
+/* Systèmes d'exploitation & Technologies Animés */
+.os-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
 }
 
-/* ========================================
-   BARRE DE PROGRESSION
-   ======================================== */
-.progress-container {
-    margin-bottom: 40px;
-}
-
-.progress-bar {
-    width: 300px;
-    height: 4px;
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-    overflow: hidden;
-    margin: 0 auto 15px;
-}
-
-.progress-fill {
-    height: 100%;
-    width: 0%;
-    background: linear-gradient(90deg, #7b61ff, #a78bfa, #7b61ff);
-    background-size: 200% 100%;
-    border-radius: 10px;
+.os-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 18px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(123, 97, 255, 0.3);
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 0.95rem;
+    font-family: 'Times New Roman', Times, serif;
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    transform: translateY(20px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
     animation: 
-        progressFill 3s ease-in-out forwards,
-        shimmer 1.5s linear infinite;
+        osFadeIn 0.7s cubic-bezier(0.16, 1, 0.3, 1) calc(var(--i) * 0.15s) forwards,
+        osFloat 3s ease-in-out infinite alternate calc(var(--i) * 0.25s + 0.7s);
+    transition: transform 0.3s ease, background 0.3s ease, border-color 0.3s ease;
 }
 
-@keyframes progressFill {
+.os-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 22px;
+    height: 22px;
+}
+
+.os-icon svg {
+    width: 18px;
+    height: 18px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.4));
+    transition: transform 0.3s ease;
+}
+
+.os-badge:hover {
+    background: rgba(123, 97, 255, 0.2);
+    border-color: rgba(167, 139, 250, 0.6);
+    transform: translateY(-4px) scale(1.05);
+}
+
+.os-badge:hover .os-icon svg {
+    transform: scale(1.2) rotate(6deg);
+}
+
+@keyframes osFadeIn {
     0% {
-        width: 0%;
+        opacity: 0;
+        transform: translateY(20px) scale(0.9);
     }
     100% {
-        width: 100%;
+        opacity: 1;
+        transform: translateY(0) scale(1);
     }
 }
 
-@keyframes shimmer {
+@keyframes osFloat {
     0% {
-        background-position: 200% 0;
+        transform: translateY(0);
     }
     100% {
-        background-position: -200% 0;
+        transform: translateY(-8px);
     }
 }
 
+/* Texte de progression */
 .progress-text {
-    color: rgba(255, 255, 255, 0.7);
-    font-size: 14px;
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 1rem;
     font-family: 'Times New Roman', Times, serif;
     letter-spacing: 3px;
     text-transform: uppercase;
-    animation: textPulse 1s ease-in-out infinite;
+    animation: textPulse 1.5s ease-in-out infinite;
 }
 
 @keyframes textPulse {
-    0%, 100% {
-        opacity: 0.7;
-    }
-    50% {
-        opacity: 1;
-    }
+    0%, 100% { opacity: 0.7; }
+    50% { opacity: 1; }
 }
 
-/* ========================================
-   TAGLINE
-   ======================================== */
+/* Tagline */
 .tagline {
-    color: rgba(255, 255, 255, 0.5);
-    font-size: 16px;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 1.05rem;
     font-family: 'Times New Roman', Times, serif;
     font-style: italic;
-    animation: taglineFadeIn 1.5s ease-out 0.5s forwards;
-    opacity: 0;
+    letter-spacing: 0.5px;
 }
 
-@keyframes taglineFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* ========================================
-   DÉCORATIONS - CERCLES FLOTTANTS
-   ======================================== */
+/* Les Bulles Décoratives Flottantes (Circles) */
 .circle {
     position: absolute;
     border-radius: 50%;
-    opacity: 0.1;
     pointer-events: none;
 }
 
 .circle-1 {
-    width: 400px;
-    height: 400px;
-    background: #7b61ff;
-    top: -100px;
-    left: -100px;
-    animation: float1 8s ease-in-out infinite;
+    width: 450px;
+    height: 450px;
+    background: rgba(123, 97, 255, 0.25);
+    filter: blur(50px);
+    top: -120px;
+    left: -120px;
+    animation: float1 10s ease-in-out infinite alternate;
 }
 
 .circle-2 {
-    width: 300px;
-    height: 300px;
-    background: #a78bfa;
-    bottom: -50px;
-    right: -50px;
-    animation: float2 10s ease-in-out infinite;
+    width: 350px;
+    height: 350px;
+    background: rgba(167, 139, 250, 0.2);
+    filter: blur(40px);
+    bottom: -80px;
+    right: -80px;
+    animation: float2 12s ease-in-out infinite alternate;
 }
 
 .circle-3 {
-    width: 150px;
-    height: 150px;
-    background: #ffffff;
-    top: 50%;
-    right: 10%;
-    animation: float3 6s ease-in-out infinite;
+    width: 200px;
+    height: 200px;
+    background: rgba(255, 255, 255, 0.1);
+    filter: blur(30px);
+    top: 45%;
+    right: 12%;
+    animation: float3 8s ease-in-out infinite alternate;
 }
 
 @keyframes float1 {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        transform: translate(30px, 30px) scale(1.1);
-    }
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(40px, 35px) scale(1.1); }
 }
 
 @keyframes float2 {
-    0%, 100% {
-        transform: translate(0, 0) scale(1);
-    }
-    50% {
-        transform: translate(-20px, -20px) scale(1.05);
-    }
+    0% { transform: translate(0, 0) scale(1); }
+    100% { transform: translate(-30px, -25px) scale(1.05); }
 }
 
 @keyframes float3 {
-    0%, 100% {
-        transform: translate(0, 0);
-    }
-    25% {
-        transform: translate(-10px, 15px);
-    }
-    50% {
-        transform: translate(5px, -10px);
-    }
-    75% {
-        transform: translate(-15px, -5px);
-    }
+    0% { transform: translate(0, 0); }
+    100% { transform: translate(-15px, 20px); }
 }
 
-/* ========================================
-   EFFET DE SORTIE (FADE OUT)
-   ======================================== */
+/* Animation de sortie (Fade Out) */
 .splash-screen.fade-out {
-    animation: fadeOut 0.8s ease-out forwards;
+    animation: fadeOut 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
 }
 
 @keyframes fadeOut {
@@ -260,50 +238,33 @@ html, body {
     }
     100% {
         opacity: 0;
-        transform: scale(1.1);
+        transform: scale(1.05);
         pointer-events: none;
     }
 }
 
-/* ========================================
-   RESPONSIVE
-   ======================================== */
+/* Responsive */
 @media (max-width: 768px) {
     .logo {
-        font-size: 48px;
+        font-size: 3rem;
     }
-    
-    .progress-bar {
-        width: 250px;
-    }
-    
-    .tagline {
-        font-size: 14px;
-        padding: 0 20px;
+
+    .os-badge {
+        padding: 6px 14px;
+        font-size: 0.85rem;
     }
     
     .circle-1 {
-        width: 250px;
-        height: 250px;
+        width: 280px;
+        height: 280px;
     }
     
     .circle-2 {
-        width: 200px;
-        height: 200px;
+        width: 220px;
+        height: 220px;
     }
 }
 
-@media (max-width: 480px) {
-    .logo {
-        font-size: 36px;
-    }
-    
-    .progress-bar {
-        width: 200px;
-    }
-    
-    .circle-3 {
-        display: none;
-    }
-}
+
+
 

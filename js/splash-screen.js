@@ -1,19 +1,20 @@
 // ========================================
 // SPLASH SCREEN - Th-tech
-// Gestion de l'écran de démarrage
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function() {
+    'use strict';
     
-    // Configuration
-    const SPLASH_DURATION = 3500; // Durée d'affichage en millisecondes (3.5s)
+    // Configuration (Total duration under 5s)
+    const SPLASH_DURATION = 3500; // 3.5s + 0.6s exit = ~4.1s
     
     const splashScreen = document.querySelector('.splash-screen');
     const progressBar = document.getElementById('progressBar');
     const progressText = document.getElementById('loadingText');
     const targetPage = 'Acceuil.html';
     
-    // Tableau de messages de chargement
+    if (!splashScreen || !progressBar) return;
+    
     const loadingMessages = [
         'Chargement...',
         'Préparation des ressources...',
@@ -22,75 +23,65 @@ document.addEventListener('DOMContentLoaded', function() {
     ];
     
     let startTime = Date.now();
+    let isNavigating = false;
     let messageIndex = 0;
     
-    // Animation de la barre de progression
     function animateProgressBar() {
+        if (isNavigating) return;
+        
         const elapsed = Date.now() - startTime;
         const progress = Math.min((elapsed / SPLASH_DURATION) * 100, 100);
         
-        // Mettre à jour la largeur de la barre
         progressBar.style.width = progress + '%';
         
-        // Changer le message selon le progrès
         const newIndex = Math.min(
-            Math.floor(progress / 25),
+            Math.floor((progress / 100) * loadingMessages.length),
             loadingMessages.length - 1
         );
         
-        if (newIndex !== messageIndex) {
+        if (newIndex !== messageIndex && progressText) {
             messageIndex = newIndex;
-            progressText.style.opacity = '0';
-            
+            progressText.style.opacity = '0.3';
             setTimeout(() => {
                 progressText.textContent = loadingMessages[messageIndex];
                 progressText.style.opacity = '1';
-            }, 200);
+            }, 150);
         }
         
-        // Continuer l'animation
         if (elapsed < SPLASH_DURATION) {
             requestAnimationFrame(animateProgressBar);
+        } else {
+            navigateToHome();
         }
     }
     
-    // Démarrer l'animation
-    requestAnimationFrame(animateProgressBar);
-    
-    // Fonction pour naviguer vers la page d'accueil
     function navigateToHome() {
-        // Ajout de l'effet de sortie
+        if (isNavigating) return;
+        isNavigating = true;
+        
+        progressBar.style.width = '100%';
+        if (progressText) progressText.textContent = 'Prêt !';
+        
         splashScreen.classList.add('fade-out');
         
-        // Attendre la fin de l'animation puis rediriger
         setTimeout(() => {
             window.location.href = targetPage;
-        }, 800); // Correspond à la durée de l'animation fade-out
+        }, 600);
     }
     
-    // Gestionnaire principal - lancer la navigation après le temps défini
-    setTimeout(() => {
-        // Changer le message final
-        progressText.textContent = 'Prêt !';
-        progressBar.style.width = '100%';
-        
-        // Attendre un court instant pour voir "Prêt !" puis naviguer
-        setTimeout(navigateToHome, 300);
-        
-    }, SPLASH_DURATION);
+    requestAnimationFrame(animateProgressBar);
     
-    // Optionnel : permettre de cliquer pour skipper l'animation
+    // Cliquer n'importe où pour passer
     splashScreen.addEventListener('click', function() {
         navigateToHome();
     });
     
-    // Empêcher le retour en arrière après le splash screen
     window.addEventListener('load', function() {
         history.pushState(null, null, window.location.href);
-        
         window.addEventListener('popstate', function() {
             history.pushState(null, null, window.location.href);
         });
     });
 });
+
 
