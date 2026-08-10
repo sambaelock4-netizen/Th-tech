@@ -17,7 +17,7 @@ body {
 .contact-hero {
     height: 50vh;
     min-height: 400px;
-    background-image: url('images/un-homme-heureux-travaillant-dans-une-agence-de-technologie-fournissant-des-services-de-developpement-de-logiciels-personnalises-scaled.jpg');
+    background-image: url('../images/un-homme-heureux-travaillant-dans-une-agence-de-technologie-fournissant-des-services-de-developpement-de-logiciels-personnalises-scaled.jpg');
     background-size: cover;
     background-position: center;
     display: flex;

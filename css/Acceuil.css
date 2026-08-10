@@ -42,7 +42,7 @@ body {
 .hero {
     height: 100vh;
     min-height: 700px;
-    background-image: url('images/IMG_4788-scaled.jpg');
+    background-image: url('../images/IMG_4788-scaled.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
@@ -277,7 +277,7 @@ h1 span {
 
 /* ===== STICKY STACK SECTION ===== */
 .stack-section {
-    background-image: url('images/industrial-designer-working-3d-model.jpg');
+    background-image: url('../images/industrial-designer-working-3d-model.jpg');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;

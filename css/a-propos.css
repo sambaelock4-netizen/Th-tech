@@ -28,7 +28,7 @@ body {
     align-items: center;
     justify-content: center;
     background: linear-gradient(135deg, rgba(15, 23, 42, 0.7) 0%, rgba(30, 41, 59, 0.6) 50%, rgba(123, 97, 255, 0.4) 100%),
-                url('images/hero à-propos.jpg') center/cover no-repeat;
+                url('../images/hero à-propos.jpg') center/cover no-repeat;
     padding: 100px 20px;
     position: relative;
     overflow: hidden;

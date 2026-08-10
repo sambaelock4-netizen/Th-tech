@@ -2,7 +2,7 @@
 .services-hero {
     height: 55vh;
     min-height: 440px;
-    background-image: url('images/IMG_4789-scaled.jpg');
+    background-image: url('../images/IMG_4789-scaled.jpg');
     background-size: cover;
     background-position: center;
     display: flex;
