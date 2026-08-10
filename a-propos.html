@@ -55,19 +55,47 @@
 <!-- QUI SOMMES-NOUS SECTION -->
 <section class="about-section">
     <div class="container">
-        <div class="about-content">
-            <span class="section-tag">Qui sommes-nous</span>
-            <h2 class="section-title">L'expertise au service de votre réussite</h2>
-            <p class="section-desc">
-                Th-tech est une équipe d'étudiants en génie logiciel basés à Douala, Cameroun. 
-                Nous concevons des solutions numériques personnalisées qui répondent aux besoins spécifiques 
-                de chaque client, des petites entreprises aux grandes organisations.
-            </p>
-            <p class="section-desc">
-                Notre philosophie repose sur trois piliers fondamentaux : l'innovation constante, 
-                la qualité irréprochable et l'accompagnement personnalisé. Nous ne nous contentons 
-                pas de livrer un projet, nous construisons des partenariats durables.
-            </p>
+        <div class="about-grid">
+            <div class="about-text">
+                <span class="section-tag">Qui sommes-nous</span>
+                <h2 class="section-title">L'expertise au service de votre réussite</h2>
+                <p class="section-desc">
+                    Th-tech est une équipe d'étudiants en génie logiciel basés à Douala, Cameroun.
+                    Nous concevons des solutions numériques personnalisées qui répondent aux besoins spécifiques
+                    de chaque client, des petites entreprises aux grandes organisations.
+                </p>
+                <p class="section-desc">
+                    Nous ne nous contentons pas de livrer un projet : nous construisons des
+                    partenariats durables, bâtis sur l'écoute et la transparence.
+                </p>
+                <a href="contact.html" class="about-link">
+                    Discuter de votre projet <i class="bi bi-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="about-pillars">
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="bi bi-lightbulb"></i></div>
+                    <div class="pillar-body">
+                        <h3>Innovation constante</h3>
+                        <p>Nous restons à l'affût des technologies les plus récentes pour vous offrir un temps d'avance.</p>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="bi bi-patch-check"></i></div>
+                    <div class="pillar-body">
+                        <h3>Qualité irréprochable</h3>
+                        <p>Chaque livrable est testé, soigné et pensé pour durer, sans compromis.</p>
+                    </div>
+                </div>
+                <div class="pillar-card">
+                    <div class="pillar-icon"><i class="bi bi-people"></i></div>
+                    <div class="pillar-body">
+                        <h3>Accompagnement personnalisé</h3>
+                        <p>Un interlocuteur unique, disponible, qui comprend vraiment vos besoins.</p>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -199,57 +227,39 @@
 
 <!-- CTA SECTION -->
 <section class="cta-section">
-    <div class="container text-center">
-        <h2 class="cta-title">Prêt à démarrer votre projet ?</h2>
-        <p class="cta-text">Discutons ensemble de vos besoins et trouvons la meilleure solution.</p>
-        <div class="cta-buttons">
-            <a href="contact.html" class="btn btn-cta">
-                <i class="bi bi-chat-dots me-2"></i>Nous contacter
-            </a>
-            <a href="https://wa.me/237640924827" class="btn btn-cta-whatsapp">
-                <i class="bi bi-whatsapp me-2"></i>WhatsApp
-            </a>
-        </div>
+  <div class="cta-container">
+    <span class="cta-surtitle">— PRÊT À COMMENCER ? —</span>
+    <h2 class="cta-title">Prêt à commencer ?</h2>
+    <p class="cta-text">Appelez-nous ou écrivez sur WhatsApp. On répond le même jour.</p>
+    <div class="cta-buttons">
+      <a href="tel:+237640924827" class="cta-btn cta-btn-call">
+        <i class="bi bi-telephone-fill"></i>
+        <span>Nous appeler</span>
+      </a>
+      <a href="https://wa.me/237640924827" target="_blank" rel="noopener" class="cta-btn cta-btn-whatsapp">
+        <i class="bi bi-whatsapp"></i>
+        <span>WhatsApp</span>
+      </a>
     </div>
+  </div>
 </section>
 
-<!-- FOOTER -->
-<footer class="footer py-5">
+<!-- FOOTER MINIMALISTE -->
+<footer class="footer">
   <div class="container">
-    <div class="row g-4">
-      <div class="col-lg-4">
-        <h2 class="footer-logo">Th-<span class="text-primary">tech.</span></h2>
-        <p>Expertise en solutions technologiques innovantes pour propulser votre entreprise vers l'avenir numérique.</p>
+    <div class="footer-top-row">
+      <div class="footer-brand-minimal">
+        <a href="Acceuil.html" class="footer-logo">Th-<span>tech.</span></a>
       </div>
-      <div class="col-lg-2">
-        <h3>Navigation</h3>
-        <ul class="list-unstyled">
-          <li><a href="Acceuil.html" class="text-decoration-none text-dark">Accueil</a></li>
-          <li><a href="Services.html" class="text-decoration-none text-dark">Services</a></li>
-          <li><a href="contact.html" class="text-decoration-none text-dark">Contact</a></li>
-          <li><a href="a-propos.html" class="text-decoration-none text-dark">À propos</a></li>
-        </ul>
+      <div class="footer-social-links">
+        <a href="#" class="footer-social-btn facebook" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+        <a href="#" class="footer-social-btn linkedin" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+        <a href="https://wa.me/237640924827" target="_blank" class="footer-social-btn whatsapp" aria-label="WhatsApp"><i class="bi bi-whatsapp"></i></a>
       </div>
-      <div class="col-lg-3">
-        <h3>Contact</h3>
-        <ul class="list-unstyled">
-          <li><i class="bi bi-envelope me-2"></i>contact@th-tech.com</li>
-          <li><i class="bi bi-phone me-2"></i>+237 640 92 48 27</li>
-          <li><i class="bi bi-geo-alt me-2"></i>Douala, Cameroun</li>
-        </ul>
-      </div>
-      <div class="col-lg-3">
-        <h3>Suivez-nous</h3>
-        <div class="d-flex gap-3">
-          <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-facebook"></i></a>
-          <a href="#" class="btn btn-outline-primary rounded-circle"><i class="bi bi-linkedin"></i></a>
-          <a href="#" class="btn btn-outline-success rounded-circle"><i class="bi bi-whatsapp"></i></a>
-        </div>
     </div>
-    <hr class="my-4">
-    <div class="text-center">
-      <p class="mb-0">&copy; 2026 Th-tech. Tous droits réservés.</p>
-    </div>
+    <hr class="footer-divider" />
+    <p class="footer-copyright">&copy; 2026 Th-tech. Tous droits réservés.</p>
+  </div>
 </footer>
 
 <!-- Bootstrap JS -->

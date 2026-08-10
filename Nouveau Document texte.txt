@@ -1,1 +1,47 @@
-je veut realiser une app web de e-commerce en html css boostrap js php natif sans Framework et mysql, nous devons realiser l'app max en 2 jour ,il doit être responsives, dans un premier temp  nous elaborerons les différents dossier et fichier a cree pour le projet, (lors de la creation tu me precisera les fichier et les dossier) ensuite nous creerons la bd et les différentes tables puis on commence à coder .
+maintenant le cta Ce bloc d'appel à l'action (CTA - Call to Action) se compose de plusieurs éléments structurés pour inciter l'utilisateur à passer à l'action :
+
+Le sur-titre : Un texte court en lettres capitales et en couleur bleue, encadré par des tirets : « — PRÊT À COMMENCER ? ».
+
+Le titre principal : Une phrase d'accroche percutante écrite dans une police avec empattement de grande taille : « Prêt à commencer ? ».
+
+Le texte d'accompagnement : Une phrase explicative rassurante située en dessous : « Appelez-nous ou écrivez sur WhatsApp. On répond le même jour. »
+
+Les boutons d'action (les CTA proprement dits) : Trois boutons distincts alignés horizontalement :
+
+Un premier bouton (#7b61ff) avec une icône de combiné téléphonique et le texte « Nous appeler ».
+
+Un deuxième bouton de couleur verte distinctive avec le logo de WhatsApp et le texte « WhatsApp ».
+
+Un troisième bouton au contour sombre et au fond transparent/clair avec le texte « Réserver un appel ». avec un hover(#7b61ff)
+
+L'ensemble repose sur un fond clair épuré, offrant un contraste visuel fort qui guide immédiatement le regard de l'internaute vers les options de contact. La disposition de ce bloc d'appel à l'action repose sur une structure centrée et pyramidale, idéale pour guider le regard naturellement du haut vers le bas :
+
+Alignement central : Tous les éléments (textes, sur-titre et boutons) sont parfaitement alignés au centre de la section, créant un équilibre visuel apaisant et formel.
+
+Hiérarchie verticale en entonnoir :
+
+Le petit sur-titre discret en haut pose le contexte.
+
+Le grand titre capte immédiatement l'attention.
+
+Le texte explicatif sous le titre apporte les précisions rassurantes.
+
+Enfin, les boutons d'action se positionnent tout en bas pour récolter l'intention de l'utilisateur une fois qu'il est convaincu.
+
+Disposition horizontale des boutons : Les trois boutons sont disposés côte à côte sur une seule ligne (en format flexbox ou grid horizontal), permettant à l'utilisateur de comparer rapidement ses options de contact (téléphone, WhatsApp ou réservation) et de choisir celle qui lui convient le mieux d'un seul coup d'œil. puis le header est diminue encore bien.   et regle aussi les carte de la page accueil tu va supprimer (<<<<<<< HEAD
+Web
+Sites vitrines, WordPress, Drupal, HTML, CSS, JavaScript
+
+=======, <<<<<<< HEAD
+Mobile
+Applications mobiles simples avec Ionic
+
+=======, <<<<<<< HEAD
+Logiciels
+Solutions de gestion adaptées à votre activité
+
+=======, <<<<<<< HEAD
+Maintenances
+Support techniques pour 24/24
+
+=======,>>>>>> 09d56c1 (refonte)) j'avais mal cloner mon repos sur mon git,  puis fais en sorte que le titre ,texte et bouton nos services de la section hero vienne vers la gauche a l'apparition (comme effet)  puis les card de la section suivantes apparaissent une a une (comme effet)  et n'oublie pas de réduire la largeur du header 

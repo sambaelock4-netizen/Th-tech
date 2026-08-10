@@ -8,6 +8,11 @@
     --success-color: #10b981;
 }
 
+/* ===== HAUT DE PAGE BLANC (dégagement du header) ===== */
+body {
+    background-color: #ffffff;
+}
+
 /* ===== HERO CONTACT ===== */
 .contact-hero {
     height: 50vh;
@@ -19,7 +24,10 @@
     align-items: center;
     justify-content: center;
     position: relative;
-    margin-top: 60px;
+    margin-top: 118px;
+    border-radius: 0 0 32px 32px;
+    overflow: hidden;
+    box-shadow: 0 20px 45px rgba(15, 23, 42, 0.12);
 }
 
 .contact-hero .hero-overlay {
@@ -512,6 +520,8 @@
     .contact-hero {
         height: 40vh;
         min-height: 300px;
+        margin-top: 98px;
+        border-radius: 0 0 24px 24px;
     }
     
     .contact-hero h1 {

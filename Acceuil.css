@@ -22,6 +22,17 @@ body {
     }
 }
 
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-70px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
 @keyframes float {
     0%, 100% { transform: translateY(0); }
     50% { transform: translateY(-10px); }
@@ -55,7 +66,6 @@ body {
     position: relative;
     z-index: 2;
     max-width: 750px;
-    animation: fadeInUp 1s ease forwards;
 }
 
 .subtitle {
@@ -65,6 +75,9 @@ body {
     text-transform: uppercase;
     letter-spacing: 3px;
     color: #a78bfa;
+    opacity: 0;
+    animation: slideInLeft 0.8s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.1s;
 }
 
 h1 {
@@ -72,6 +85,9 @@ h1 {
     line-height: 1.1;
     margin-bottom: 30px;
     font-weight: 700;
+    opacity: 0;
+    animation: slideInLeft 0.9s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.25s;
 }
 
 h1 span {
@@ -83,6 +99,9 @@ h1 span {
     line-height: 1.8;
     margin-bottom: 40px;
     color: #e2e8f0;
+    opacity: 0;
+    animation: slideInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.4s;
 }
 
 .btn-main {
@@ -96,6 +115,9 @@ h1 span {
     display: inline-block;
     transition: all 0.4s ease;
     box-shadow: 0 15px 40px rgba(123, 97, 255, 0.4);
+    opacity: 0;
+    animation: slideInLeft 1s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation-delay: 0.55s;
 }
 
 .btn-main:hover {
@@ -179,13 +201,25 @@ h1 span {
     padding: 35px;
     border-radius: 20px;
     box-shadow: 0 20px 50px rgba(0,0,0,0.06);
-    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
 }
 
-.card:hover {
+.card.card-revealed {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.card.card-revealed:hover {
     transform: translateY(-10px);
     box-shadow: 0 25px 60px rgba(123, 97, 255, 0.15);
 }
+
+.intro-cards .card:nth-child(1) { transition-delay: 0.1s; }
+.intro-cards .card:nth-child(2) { transition-delay: 0.25s; }
+.intro-cards .card:nth-child(3) { transition-delay: 0.4s; }
+.intro-cards .card:nth-child(4) { transition-delay: 0.55s; }
 
 .card h3 {
     font-size: 1.4rem;
@@ -438,86 +472,4 @@ h1 span {
     .stack-card--1 { top: 160px; }
     .stack-card--2 { top: 185px; }
     .stack-card--3 { top: 210px; }
-}
-
-/* ===== CTA SECTION ===== */
-.cta-section {
-    padding: 80px 20px;
-    background: linear-gradient(135deg, #7b61ff, #5a42d1);
-    position: relative;
-    overflow: hidden;
-}
-
-.cta-section .container {
-    position: relative;
-    z-index: 2;
-}
-
-.cta-title {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: white;
-    margin-bottom: 15px;
-}
-
-.cta-text {
-    font-size: 1.15rem;
-    color: rgba(255, 255, 255, 0.9);
-    margin-bottom: 35px;
-}
-
-.cta-section .cta-buttons {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-}
-
-.cta-section .btn-cta {
-    background: white;
-    color: #7b61ff;
-    padding: 16px 35px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: none;
-}
-
-.cta-section .btn-cta:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
-    background: white;
-    color: #7b61ff;
-}
-
-.cta-section .btn-cta-whatsapp {
-    background: transparent;
-    color: white;
-    padding: 16px 35px;
-    border-radius: 12px;
-    font-weight: 600;
-    font-size: 1rem;
-    text-decoration: none;
-    transition: all 0.3s ease;
-    border: 2px solid rgba(255, 255, 255, 0.5);
-}
-
-.cta-section .btn-cta-whatsapp:hover {
-    background: #25D366;
-    border-color: #25D366;
-    transform: translateY(-3px);
-    color: white;
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .cta-section .cta-buttons {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .cta-title {
-        font-size: 2rem;
-    }
 }
