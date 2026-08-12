@@ -763,15 +763,75 @@
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
 }
 
-/* ===== SCROLL REVEAL ANIMATION ===== */
-[data-reveal] {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+
+/* ===== SCROLL REVEAL — désactivé pour performance ===== */
+/* [data-reveal] n'est plus utilisé : les sections s'affichent instantanément */
+[data-reveal] { opacity: 1; transform: none; }
+[data-reveal].revealed { opacity: 1; transform: none; }
+
+
+/* ═══════════════════════════════════════════════════════════
+   ALTERNATING SECTION BACKGROUNDS — Style Google / Stripe
+   Service 01 & 03 → blanc pur
+   Service 02 & 04 → fond teinté indigo très subtil
+═══════════════════════════════════════════════════════════ */
+
+/* Fond blanc pur (Services 01 & 03) */
+.service-detail-section.svc-white {
+    background: #ffffff;
 }
 
-[data-reveal].revealed {
-    opacity: 1;
-    transform: translateY(0);
+/* Fond teinté premium — très léger indigo/violet (Services 02 & 04)
+   Référence : Stripe, Linear, Google Workspace landing pages */
+.service-detail-section.svc-alt-bg {
+    background: linear-gradient(160deg, #f0f4ff 0%, #f7f5ff 40%, #fafcff 100%);
+    position: relative;
+}
+
+/* Séparateur vertical coloré gauche — touch design premium */
+.service-detail-section.svc-alt-bg::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 10%;
+    height: 80%;
+    width: 3px;
+    background: linear-gradient(180deg, transparent, #7b61ff 30%, #a78bfa 70%, transparent);
+    border-radius: 0 2px 2px 0;
+    opacity: 0.35;
+}
+
+/* Pas d'animation sur les images dans les sections (performance) */
+.service-detail-img-wrapper img {
+    will-change: auto;          /* annule will-change inutile */
+    transition: none !important;
+}
+
+/* ── Boutons : animations conservées (UX) ── */
+.service-cta .btn-primary {
+    transition:
+        background-color 0.32s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow       0.32s cubic-bezier(0.16, 1, 0.3, 1),
+        transform        0.22s cubic-bezier(0.16, 1, 0.3, 1) !important;
+}
+
+.service-cta .btn-primary:hover {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #7b61ff 100%);
+    border-color: transparent;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(123, 97, 255, 0.32);
+}
+
+.service-cta .btn-outline-whatsapp {
+    transition:
+        background-color 0.28s ease,
+        color            0.28s ease,
+        transform        0.22s ease,
+        box-shadow       0.28s ease !important;
+}
+
+.service-cta .btn-outline-whatsapp:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 211, 102, 0.28);
 }
 
