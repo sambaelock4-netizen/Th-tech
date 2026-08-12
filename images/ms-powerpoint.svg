@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="pptGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#801804"/>
+      <stop offset="100%" stop-color="#b7472a"/>
+    </linearGradient>
+    <linearGradient id="pptCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#c43e1c"/>
+      <stop offset="100%" stop-color="#d83b01"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="10" width="36" height="44" rx="4" fill="url(#pptGrad)" />
+  <path d="M28 20 A12 12 0 0 1 48 30 L28 30 Z" fill="#ffffff" opacity="0.9" />
+  <path d="M28 34 A12 12 0 0 1 44 44 L28 44 Z" fill="#ffffff" opacity="0.7" />
+  <rect x="6" y="14" width="32" height="36" rx="6" fill="url(#pptCardGrad)" filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.3))" />
+  <path d="M15 42V22H22.5C26 22 28.5 24 28.5 27.5C28.5 31 26 33 22.5 33H19V42H15ZM19 29.2H22.2C23.8 29.2 24.8 28.5 24.8 27.5C24.8 26.5 23.8 25.8 22.2 25.8H19V29.2Z" fill="#ffffff"/>
+</svg>

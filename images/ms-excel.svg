@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="64" height="64">
+  <defs>
+    <linearGradient id="excelGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#043815"/>
+      <stop offset="100%" stop-color="#0e5c2f"/>
+    </linearGradient>
+    <linearGradient id="excelCardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#107c41"/>
+      <stop offset="100%" stop-color="#1f9a55"/>
+    </linearGradient>
+  </defs>
+  <rect x="22" y="10" width="36" height="44" rx="4" fill="url(#excelGrad)" />
+  <rect x="28" y="18" width="10" height="10" rx="1" fill="#ffffff" opacity="0.8" />
+  <rect x="42" y="18" width="10" height="10" rx="1" fill="#ffffff" opacity="0.8" />
+  <rect x="28" y="32" width="10" height="10" rx="1" fill="#ffffff" opacity="0.8" />
+  <rect x="42" y="32" width="10" height="10" rx="1" fill="#ffffff" opacity="0.8" />
+  <rect x="6" y="14" width="32" height="36" rx="6" fill="url(#excelCardGrad)" filter="drop-shadow(0px 6px 12px rgba(0,0,0,0.3))" />
+  <path d="M14.5 42L19.8 32L14.8 22H19.2L22.2 28.5L25.3 22H29.5L24.5 32L29.8 42H25.3L22.2 35.3L19 42H14.5Z" fill="#ffffff"/>
+</svg>
